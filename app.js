@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 
-const ValidationException = require('./exception/validation.exception')
+const ValidationException = require('./exception/validation.excpetion')
 
 
 const app = express()
