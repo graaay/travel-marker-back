@@ -11,10 +11,10 @@ exports.login = async (login, password) => {
     return result
 }
 
-exports.newUser = async (data) => {
+exports.newUser = async (user) => {
     let con = await db.connect()
 
-    let user = new Question(data)
+    let user = new Question(user)
     await user.save()
 
     con.disconnect()
