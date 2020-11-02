@@ -1,7 +1,5 @@
 const repository = require('../repository/localization.repository')
 const ValidationException = require('../exception/validation.excpetion')
-const localizationRepo = requirerequire('../repository/localization.repository')
-
 
 exports.save = async (localization) => {
     if (localization == null) {
