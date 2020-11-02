@@ -7,9 +7,9 @@ module.exports = (app) => {
         res.end()
     })
 
-    app.get('/localization/byUser/:user', async (req, res) => {
+    app.get('/localizations/byUser/:user', async (req, res) => {
         let user = req.params.user
-        let localizations = await service.findByTest(user)
+        let localizations = await service.findByUser(user)
         res.json(localizations)
     })
 
