@@ -3,7 +3,7 @@ const db = require("../db")
 
 exports.login = async (login, password) => {
     let con = await db.connect()
-    let result = await Question.find({
+    let result = await User.find({
         login: login,
         password: password
     })
@@ -11,11 +11,11 @@ exports.login = async (login, password) => {
     return result
 }
 
-exports.newUser = async (user) => {
+exports.save = async (user) => {
     let con = await db.connect()
 
-    let user = new Question(user)
-    await user.save()
+    let usuario = new User(user)
+    await usuario.save()
 
     con.disconnect()
 }

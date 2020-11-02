@@ -9,10 +9,10 @@ exports.findAll = async () => {
     return result
 }
 
-exports.save = async () => {
+exports.save = async (localization) => {
     let con = await db.connect()
     
-    let newLocalization = new Localization()
+    let newLocalization = new Localization(localization)
 
     await newLocalization.save()
     con.disconnect()
